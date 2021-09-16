@@ -25,6 +25,10 @@ void main() {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         brightness: Brightness.dark,
+        fontFamily: 'RobotoMono',
+        textTheme: const TextTheme(
+          bodyText2: TextStyle(fontWeight: FontWeight.w300),
+        ),
       ),
     ),
   );

@@ -4,7 +4,6 @@ import 'package:flutter/rendering.dart';
 import 'package:genshin_renderer/entities/constants.dart';
 import 'package:genshin_renderer/entities/genshin.dart';
 
-
 class ConstellationCard extends StatelessWidget {
   final Constellation constellation;
   final String element;
@@ -120,8 +119,7 @@ class ItemCard extends StatelessWidget {
 class CharacterWidget extends StatelessWidget {
   final DetailedAvatar avatar;
 
-  const CharacterWidget({required this.avatar, Key? key})
-      : super(key: key);
+  const CharacterWidget({required this.avatar, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

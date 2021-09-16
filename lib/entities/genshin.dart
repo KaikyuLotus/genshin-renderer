@@ -283,7 +283,6 @@ class Battle {
 
 class CityExploration {}
 
-
 class Constellation {
   final int id;
   final String name;
@@ -696,7 +695,6 @@ class WorldExploration {
 }
 
 class UserInfo {
-  
   final String? role;
   final List<Avatar> avatars;
   final Stats stats;
@@ -718,7 +716,6 @@ class UserInfo {
     required this.homes,
   });
 
-  
   WorldExploration worldExplorationWithName(String name) {
     return worldExplorations.firstWhere((e) => e.name == name);
   }
