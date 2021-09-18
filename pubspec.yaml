@@ -24,33 +24,6 @@ flutter:
   assets:
     - resources/images/genshin/
   fonts:
-    - family: RobotoMono
+    - family: GenshinImpact
       fonts:
-        - asset: resources/fonts/RobotoMono-Bold.ttf
-          weight: 400
-        - asset: resources/fonts/RobotoMono-BoldItalic.ttf
-          weight: 400
-        - asset: resources/fonts/RobotoMono-ExtraLight.ttf
-          weight: 200
-        - asset: resources/fonts/RobotoMono-ExtraLightItalic.ttf
-          weight: 200
-        - asset: resources/fonts/RobotoMono-Italic.ttf
-          weight: 400
-        - asset: resources/fonts/RobotoMono-Light.ttf
-          weight: 300
-        - asset: resources/fonts/RobotoMono-LightItalic.ttf
-          weight: 300
-        - asset: resources/fonts/RobotoMono-Medium.ttf
-          weight: 500
-        - asset: resources/fonts/RobotoMono-MediumItalic.ttf
-          weight: 500
-        - asset: resources/fonts/RobotoMono-Regular.ttf
-          weight: 400
-        - asset: resources/fonts/RobotoMono-SemiBold.ttf
-          weight: 400
-        - asset: resources/fonts/RobotoMono-SemiBoldItalic.ttf
-          weight: 400
-        - asset: resources/fonts/RobotoMono-Thin.ttf
-          weight: 100
-        - asset: resources/fonts/RobotoMono-ThinItalic.ttf
-          weight: 100
+        - asset: resources/fonts/genshin.ttf
