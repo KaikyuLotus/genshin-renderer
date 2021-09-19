@@ -2,10 +2,11 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:genshin_renderer/entities/widgetables/genshin_characters.dart';
 import 'package:web_renderer/web_renderer.dart';
 
+import 'entities/widgetables/genshin_characters.dart';
 import 'entities/widgetables/genshin_character.dart';
+import 'entities/widgetables/health.dart';
 
 void main() {
   runApp(
@@ -15,6 +16,7 @@ void main() {
           requestMapping: {
             'genshin_characters': GenshinCharacters.fromJson,
             'genshin_character': GenshinCharacter.fromJson,
+            'health': Health.fromJson,
           },
           address: InternetAddress.anyIPv4,
           port: 8080,
