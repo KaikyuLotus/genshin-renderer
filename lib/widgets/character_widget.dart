@@ -81,8 +81,6 @@ class ItemCard extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                width: cardHeight,
-                height: cardHeight,
                 decoration: BoxDecoration(
                   border: Border(
                     bottom: BorderSide(
@@ -98,13 +96,23 @@ class ItemCard extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 8.0),
+                padding: const EdgeInsets.only(left: 8.0, top: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(name),
-                    Text(line1),
-                    if (line2 != null) Text(line2!),
+                    Container(height: 5),
+                    Text(
+                      line1,
+                      style: const TextStyle(color: Colors.grey),
+                    ),
+                    if (line2 != null) ...[
+                      Container(height: 5),
+                      Text(
+                        line2!,
+                        style: const TextStyle(color: Colors.grey),
+                      ),
+                    ],
                   ],
                 ),
               )
@@ -173,8 +181,8 @@ class CharacterWidget extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 25,
-            bottom: 20,
+            left: 30,
+            bottom: 40,
             width: MediaQuery.of(context).size.width / 2,
             child: GridView.builder(
               shrinkWrap: true,
