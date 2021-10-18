@@ -201,6 +201,11 @@ class CharacterWidget extends StatelessWidget {
               },
             ),
           ),
+          const Positioned(
+            bottom: 5,
+            right: 5,
+            child: Text('patreon.com/KaikyuLotus'),
+          ),
         ],
       ),
     );

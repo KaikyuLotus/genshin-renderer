@@ -10,6 +10,7 @@ class GenshinCharacters implements Widgetable {
   static const defaultWindowMultiplier = 130.0;
   final maxCols = 5;
   int get maxRows => (userInfo.avatars.length / maxCols).ceil();
+  static const bottomMargin = 0.2;
 
   final UserInfo userInfo;
   final double? _pixelRatio;
@@ -27,7 +28,7 @@ class GenshinCharacters implements Widgetable {
 
   @override
   Size get size =>
-      Size(maxCols.toDouble(), maxRows.toDouble()) *
+      Size(maxCols.toDouble(), maxRows.toDouble() + bottomMargin) *
       (_windowMultiplier ?? defaultWindowMultiplier);
 
   @override

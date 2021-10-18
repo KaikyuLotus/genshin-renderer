@@ -154,27 +154,36 @@ class CharactersGridWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: const Color.fromARGB(255, 39, 39, 39),
-      child: GridView.builder(
-        padding: const EdgeInsets.all(GenshinCharacters.padding),
-        shrinkWrap: true,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: maxCols,
-          childAspectRatio: 1.0,
-          crossAxisSpacing: paddingW,
-          mainAxisSpacing: paddingH,
-        ),
-        itemCount: userInfo.avatars.length,
-        itemBuilder: (context, index) {
-          return ClipRRect(
-            borderRadius: const BorderRadius.all(Radius.circular(10)),
-            child: CharacterCard(
-              avatar: userInfo.avatars[index],
+    return Stack(
+      children: [
+        Container(
+          color: const Color.fromARGB(255, 39, 39, 39),
+          child: GridView.builder(
+            padding: const EdgeInsets.all(GenshinCharacters.padding),
+            shrinkWrap: true,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: maxCols,
+              childAspectRatio: 1.0,
+              crossAxisSpacing: paddingW,
+              mainAxisSpacing: paddingH,
             ),
-          );
-        },
-      ),
+            itemCount: userInfo.avatars.length,
+            itemBuilder: (context, index) {
+              return ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(10)),
+                child: CharacterCard(
+                  avatar: userInfo.avatars[index],
+                ),
+              );
+            },
+          ),
+        ),
+        const Positioned(
+          right: 5,
+          bottom: 5,
+          child: Text('patreon.com/KaikyuLotus'),
+        )
+      ],
     );
   }
 }
