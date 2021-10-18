@@ -154,11 +154,11 @@ class CharactersGridWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          color: const Color.fromARGB(255, 39, 39, 39),
-          child: GridView.builder(
+    return Container(
+      color: const Color.fromARGB(255, 39, 39, 39),
+      child: Stack(
+        children: [
+          GridView.builder(
             padding: const EdgeInsets.all(GenshinCharacters.padding),
             shrinkWrap: true,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -177,13 +177,13 @@ class CharactersGridWidget extends StatelessWidget {
               );
             },
           ),
-        ),
-        const Positioned(
-          right: 5,
-          bottom: 5,
-          child: Text('patreon.com/KaikyuLotus'),
-        )
-      ],
+          const Positioned(
+            right: 5,
+            bottom: 5,
+            child: Text('patreon.com/KaikyuLotus'),
+          )
+        ],
+      ),
     );
   }
 }
