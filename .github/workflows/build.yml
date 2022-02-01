@@ -1,6 +1,7 @@
 name: Client Build
 
 on:
+  workflow_call:
   push:
     branches:
       - master
