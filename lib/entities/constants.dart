@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 const elementColors = <String, Color>{
   'Pyro': Color.fromARGB(255, 254, 169, 111),
   'Hydro': Color.fromARGB(255, 55, 200, 254),
@@ -17,3 +19,7 @@ const colorMap = <int, Color>{
   4: Color.fromARGB(255, 138, 43, 226),
   5: Color.fromARGB(255, 255, 215, 0),
 };
+
+const bgColor = Color.fromARGB(255, 39, 39, 39);
+const cardColor = Color.fromARGB(255, 23, 23, 23);
+const subtitleColor = Color(0xFF9F9F9F);

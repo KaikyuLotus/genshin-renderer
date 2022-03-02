@@ -8,7 +8,7 @@ class GenshinCharacters implements Widgetable {
   static const padding = 5.0;
   static const defaultPixelRatio = 1.0;
   static const defaultWindowMultiplier = 130.0;
-  final maxCols = 5;
+  int get maxCols => userInfo.avatars.length <= 8 ? 4 : 5;
   int get maxRows => (userInfo.avatars.length / maxCols).ceil();
   static const bottomMargin = 0.2;
 

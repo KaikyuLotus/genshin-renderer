@@ -538,6 +538,7 @@ class Skin {
 }
 
 class Stats {
+  // TODO add "Number of Remarkable Chests"
   final int activeDayNumber;
   final int achievementNumber;
   final int winRate;
@@ -569,6 +570,21 @@ class Stats {
     required this.commonChestNumber,
     required this.electroculusNumber,
   });
+
+  Map<String, int> get titleValueMap => {
+        'Days Active': activeDayNumber,
+        'Achievements': achievementNumber,
+        'Characters': avatarNumber,
+        'Waypoints Unlocked': wayPointNumber,
+        'Anemoculi': anemoculusNumber,
+        'Geoculi': geoculusNumber,
+        'Electroculi': electroculusNumber,
+        'Domains Unlocked': domainNumber,
+        'Luxurious Chests Opened': luxuriousChestNumber,
+        'Precious Chests Opened': preciousChestNumber,
+        'Exquisite Chests Opened': exquisiteChestNumber,
+        'Common Chests Opened': commonChestNumber,
+      };
 
   static Stats fromJson(Map<String, dynamic> json) {
     return Stats(

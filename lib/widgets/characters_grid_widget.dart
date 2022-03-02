@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:genshin_renderer/entities/constants.dart' as constants;
 import 'package:genshin_renderer/entities/genshin.dart';
 import 'package:genshin_renderer/entities/widgetables/genshin_characters.dart';
 
@@ -155,7 +156,7 @@ class CharactersGridWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color.fromARGB(255, 39, 39, 39),
+      color: constants.bgColor,
       child: Stack(
         children: [
           GridView.builder(
@@ -180,8 +181,16 @@ class CharactersGridWidget extends StatelessWidget {
           const Positioned(
             right: 5,
             bottom: 5,
-            child: Text('patreon.com/KaikyuLotus'),
-          )
+            child: Text('ko-fi.com/KaikyuLotus'),
+          ),
+          if (userInfo.avatars.length == 8)
+            const Positioned(
+              left: 5,
+              bottom: 5,
+              child: Text(
+                'Showing only top 8 due to Hoyoverse limitations.',
+              ),
+            )
         ],
       ),
     );
