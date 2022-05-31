@@ -541,7 +541,7 @@ class Stats {
   // TODO add "Number of Remarkable Chests"
   final int activeDayNumber;
   final int achievementNumber;
-  final int winRate;
+  final int? winRate;
   final int anemoculusNumber;
   final int geoculusNumber;
   final int avatarNumber;
@@ -710,8 +710,40 @@ class WorldExploration {
   }
 }
 
+class Role {
+  final String? avatarUrl;
+  final String nickname;
+  final String region;
+  final int level;
+
+  Role({
+    required this.avatarUrl,
+    required this.nickname,
+    required this.region,
+    required this.level,
+  });
+
+  static Role fromJson(Map<String, dynamic> json) {
+    return Role(
+      avatarUrl: json['AvatarUrl'],
+      nickname: json['nickname'],
+      region: json['region'],
+      level: json['level'],
+    );
+  }
+
+  Map toJson() {
+    return {
+      'AvatarUrl': avatarUrl,
+      'nickname': nickname,
+      'region': region,
+      'level': level,
+    };
+  }
+}
+
 class UserInfo {
-  final String? role;
+  final Role role;
   final List<Avatar> avatars;
   final Stats stats;
   final List<CityExploration> cityExplorations;
@@ -738,7 +770,7 @@ class UserInfo {
 
   static UserInfo fromJson(Map<String, dynamic> json) {
     return UserInfo(
-      role: json['role'],
+      role: Role.fromJson(json['role']),
       avatars: Avatar.listFromJsonArray(json['avatars']),
       stats: Stats.fromJson(json['stats']),
       cityExplorations: <CityExploration>[],
