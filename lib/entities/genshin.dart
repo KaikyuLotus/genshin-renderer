@@ -743,7 +743,7 @@ class Role {
 }
 
 class UserInfo {
-  final Role role;
+  final Role? role;
   final List<Avatar> avatars;
   final Stats stats;
   final List<CityExploration> cityExplorations;
@@ -770,7 +770,7 @@ class UserInfo {
 
   static UserInfo fromJson(Map<String, dynamic> json) {
     return UserInfo(
-      role: Role.fromJson(json['role']),
+      role: json['role'] != null ? Role.fromJson(json['role']) : null,
       avatars: Avatar.listFromJsonArray(json['avatars']),
       stats: Stats.fromJson(json['stats']),
       cityExplorations: <CityExploration>[],
