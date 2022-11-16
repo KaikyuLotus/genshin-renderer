@@ -661,7 +661,7 @@ class Weapon {
 
 class WorldExploration {
   final int id;
-  final int level;
+  final int? level;
   final int explorationPercentage;
   final String icon;
   final String name;
