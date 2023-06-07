@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:genshin_renderer/widgets/character_widget.dart';
+import 'package:genshin_renderer/widgets/genshin/genshin_character_widget.dart';
 import 'package:web_renderer/web_renderer.dart';
 
-import '../genshin.dart';
+import '../../genshin.dart';
 
 class GenshinCharacter implements Widgetable {
   static const defaultWindowMultiplier = 50.0;

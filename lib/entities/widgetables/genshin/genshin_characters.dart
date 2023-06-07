@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:genshin_renderer/widgets/characters_grid_widget.dart';
+import 'package:genshin_renderer/widgets/genshin/genshin_characters_grid_widget.dart';
 import 'package:web_renderer/web_renderer.dart';
 
-import '../genshin.dart';
+import '../../genshin.dart';
 
 class GenshinCharacters implements Widgetable {
   static const padding = 5.0;
@@ -33,7 +33,7 @@ class GenshinCharacters implements Widgetable {
 
   @override
   Widget asWidget() {
-    return CharactersGridWidget(userInfo: userInfo, maxCols: maxCols.toInt());
+    return GenshinCharactersGridWidget(userInfo: userInfo, maxCols: maxCols.toInt());
   }
 
   static GenshinCharacters fromJson(Map<String, dynamic> json) {

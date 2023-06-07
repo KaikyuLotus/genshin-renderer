@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:genshin_renderer/entities/constants.dart' as constants;
 import 'package:genshin_renderer/entities/genshin.dart';
-import 'package:genshin_renderer/entities/widgetables/genshin_characters.dart';
+import 'package:genshin_renderer/entities/widgetables/genshin/genshin_characters.dart';
 
 class ConstellationCircle extends StatelessWidget {
   final double width;
@@ -140,14 +140,14 @@ class CharacterCard extends StatelessWidget {
   }
 }
 
-class CharactersGridWidget extends StatelessWidget {
+class GenshinCharactersGridWidget extends StatelessWidget {
   static const paddingH = 6.0;
   static const paddingW = 6.0;
 
   final UserInfo userInfo;
   final int maxCols;
 
-  const CharactersGridWidget({
+  const GenshinCharactersGridWidget({
     required this.userInfo,
     required this.maxCols,
     Key? key,

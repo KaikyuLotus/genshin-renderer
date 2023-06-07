@@ -6,13 +6,14 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   cached_network_image: ^3.0.0
   web_renderer: ^0.0.2
+  auto_size_text: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -27,3 +28,6 @@ flutter:
     - family: GenshinImpact
       fonts:
         - asset: resources/fonts/genshin.ttf
+    - family: DIN
+      fonts:
+        - asset: resources/fonts/DIN.ttf
