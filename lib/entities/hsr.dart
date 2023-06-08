@@ -100,7 +100,7 @@ class Avatar {
       rarity: json['rarity'],
       rank: json['rank'],
       isChosen: json['is_chosen'],
-      equip: Equip.fromJson(json['equip']),
+      equip: json['equip'] != null ? Equip.fromJson(json['equip']) : null,
       relics: Relic.fromJsonArray(json['relics']),
     );
   }
